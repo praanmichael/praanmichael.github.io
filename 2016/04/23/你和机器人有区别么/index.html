@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          你和机器人有区别么 - Michael Blog|麦先生的博客
+        
+    </title>
+
+    <link rel="canonical" href="http://praanmichael.com/2016/04/23/你和机器人有区别么/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Michael Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/robot.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                    </div>
+                    <h1>你和机器人有区别么</h1>
+                    <h2 class="subheading">对于人工智能的担忧是有必要的吗？</h2>
+                    <span class="meta">
+                        Posted by 麦先生 on
+                        2016-04-23
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p><em>随着人工智能的不断发展、虚拟现实技术的不断成熟、克隆技术的不断进步，越来越多人开始担心机器人否会取人类而代之，是否会奴役人类，本文从另一个角度试图理解并阐释人类对于机器人的担忧</em></p>
+<p>前段时间AlphaGo战胜了李世乭，引起了对人工智能的广泛关注，有一些人加入了对人工智能担忧的行列之中，也出现了很多讨论，诸如：人类是独一无二的具有创造力、对艺术有所感知的生物，我们要发挥我们的创造力；或者是抒发自己对于人工智能与人类相处的担忧之情；也有提到“当人工智能能够意识到自己是在下棋的时候，就有点可怕了”。</p>
+<p>先不谈对于以上内容的探讨，开篇此处想丢下一个问题：“你和机器人有区别吗？”即“万一我们人类的大多数跟机器人其实没有什么太大的差别呢？即“若你已经被奴役了，你还担心其他‘人’来奴役你吗？”</p>
+<p><strong>一、机器人是什么</strong></p>
+<p>百度百科给出的定义如下：</p>
+<blockquote>
+<p>机器人（Robot）是自动执行工作的机器装置。它既可以接受人类指挥，又可以运行预先编排的程序，也可以根据以人工智能技术制定的原则纲领行动。它的任务是协助或取代人类工作的工作，例如生产业、建筑业，或是危险的工作。</p>
+</blockquote>
+<p>我们来对这个定义进行部分的修改：</p>
+<blockquote>
+<p>机器人（Robot）是会自动执行工作的一群<strong>机器化</strong>的人。他们既可以接受人类指挥，又可以运用自我的判断力执行工作，也可以根据世界上少部分人制定的原则纲领进行行动。他们的任务是协助或替代一部分人的工作，例如生产业、建筑业，或是危险的工作。</p>
+</blockquote>
+<p>我们是否可以这样说？我们之中的有一些人是被另一部分人指挥的，我们活在由世界上少部分人指定的规则之中，我们中的有一些人进行最艰苦最危险的工作而使他人不必面对这样的工作。</p>
+<p>《楚门的世界》中的楚门，从他出生的一刻起他也就跟机器人一样，不断地被人为编程，直到他到达拍摄场边缘掀开幕布之前他是一个完整的人类么？他过着完全被安排的生活，以为当时的世界就是真实的就是完整的，我们是否可以称他为一个“被奴役的人类”，一个机器人一样的人类？定义是否是人类是否是机器人是否就是要看组成我们身体的物质种类？答案似乎并不那么明确。</p>
+<p>奴役的工具有很多种。金钱在某一方面来说是一种奴役的工具，通过金钱奴役了一个人的恐惧与贪婪，通过一系列的经济和金融手段，使成千上万的人正成为被奴役的对象；当一个国家把国民人口看作是生产资料用于推动经济的发展调整生育政策的时候，这个国家的国民跟机器人的差异也就跟着被弱化了；我们被要求宣传的制度、理念、文化、教育是由少部分人决定的，不断被灌输这类思想，我们在某种程度上也就就变成了类似机器再被一遍又一遍地修改和编程的对象。我们在看楚门的时候，我们是否也能从楚门的身上看到我们自己？</p>
+<p>我们和机器人的差异在哪？或者说我们人类真的那么特别么？</p>
+<p><strong>二、生命和物质的界限</strong></p>
+<p>生命在微观尺度上（如病毒、朊病毒、噬菌体等）跟物质的界限就变得模糊了。甚至在量子尺度上，某些基本粒子的行为也呈现出某种智慧性，如：叶绿体中受光照而产生的激子几乎能够在瞬间绕过结构上的各种阻拦到达光和反应作用的核心，激子仿佛事先知道了最合理的路径进而在瞬间到达一般，当然具体的解释还没有定论，但是我们是否真的能那么准确地判断出生命和物质的界限？答案显然是否定的。</p>
+<p>人类又是否真的是如我们所想的那么特殊、与众不同呢？答案应当也是否定的。</p>
+<p>开篇的时候提到了对于AlphaGo的讨论时有人提及人类是具有创造力的，或者也有人认为人类之所以特别是因为人类有情感，而这种情感或者创造力是其他动物所不具备的。我记得曾经很小的时候，看类似动物世界的节目，有摄影师在非洲塞伦盖蒂大草原拍摄日落的时候意外拍到一只呆呆地站着同样看着壮美的日落一动不动的狒狒，我们无从知道那只狒狒是不是真的拥有鉴别美得的力被日落的辉煌景象惊诧，但我们也无法下定论其他动物就不能，因为我们也是动物，不是么？同样有其他非人类的动物是有自杀行为的，如袋鼠或者灵长类会自己走进海里淹死等等，如果动物没有情感，是什么原因让他们选择自杀？当然这两个例子都没有给出肯定的解释，但是，我们不应该因为不确定以及自我“高等”的幻觉就否定一切的可能，不是么？</p>
+<p>举一个非常确定的例子，事实上我们人体是由几百万生物构成的，我们的肠道菌群早已跟我们共生了无数的年月。但是，当我们肚子疼的时候，首先发生变化的不是我们，而是我们胃肠道内的菌群，有益菌开始减少，有害菌开始大量繁殖，于是我们的肚子开始疼痛并有腹泻等等反应。看起来这是一件普通的事情，但仔细一想，真的会“细思极恐”：肚子疼到底是你自己的意志的反应或者说痛苦情感的来源是你自己还是这些微生物通过化学的过程告诉你的？由此可以联想，你所有的跟身体、物质有关的感受，真的是你自己的吗，<strong>人到底是一个人还是一个百万生物的综合体</strong>？</p>
+<p><strong>三、你担心被机器人么奴役么</strong></p>
+<p>很多影视作品，如黑客帝国、时间规划局等等，都在讲述一些我们神不知鬼不觉中发生的事情。</p>
+<p>黑客帝国讲述的就是主角尼欧从虚拟世界中觉醒、被同伴引导，与机器军团展开大战并拯救了想要抵抗机器军团的抵抗军的故事。虽然事实上这部电影的世界并不是那么简单的只有一个虚拟世界而是有两重虚拟世界即使尼欧到达了地表那也是另一个虚拟世界但这并不影响我们如何去理解“人类在电影中被奴役”这个事实：有大量的人类被迫意识进入matrix从而提供永远沉睡为机器提供生物电，有大量matrix中的人类是从未意识到自己被奴役的。</p>
+<p>时间规划局也是另一部有趣的作品，即人类统治者给每个人类安装了一个生物时钟，人类通过工作来挣取自己生存的时间。统治者通过生存的时间以及劳动创造了一个几乎牢不可破的制度，越底层的时区被统治和剥削得愈发惨烈。这种制度，像极了我们世界上通行的税收、剥削的金钱和经济体系。事实上，富裕是一件很容易也很难的事情，途径只有一种“剥削”——一个人即使再聪明再有智慧，他通过劳动所能获得的等值的报酬终归是有限的，个人的时间也是有限的，哪怕24小时工作也只不可能获得25小时的报酬，然而，如果学会创造一种制度、或者体系，从他人的劳动上收获报酬，那么富裕就是容易实现的了。</p>
+<p>无论是黑客帝国里的奴役还是时间规划局中的奴役，这种奴役都是以神不知鬼不觉的方式发生的，我们反观自己，世界上有多少人能够逃过这种类似的奴役呢？那我们是否可以假设，如果真有一天，某种人工智能想要奴役人类了，他们会选择发动一场大战还是慢慢地无害地渗透这种奴役呢？如果是后者，那同此时此刻又有多少差别呢？</p>
+<p><strong>四、你和机器人有区别吗</strong></p>
+<p>回到了一开始的文题了，你和机器人有区别吗？答案显然是有的，这种区别是在某些能力上的差异，我们人类在某些方面是比机器人强的，我们中的某些人是真正不被奴役的。</p>
+<p>但是说到底，没有人想做一个被奴役的机器人或者是一个被人工智能奴役的人类，要做有勇气和判断力去掀开世界尽头幕布的楚门，否则，在你盲目担心被奴役的时候就要问你这句话了：</p>
+<p><strong>请问，你和机器人有区别吗？</strong></p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start -->
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="2016/04/23/你和机器人有区别么/"
+                    data-title="你和机器人有区别么"
+                    data-url="http://praanmichael.com/2016/04/23/你和机器人有区别么/"
+                    data-images="http://praanmichael.com/2016/04/23/你和机器人有区别么//img/robot.jpg"
+                    data-content="随着人工智能的不断发展、虚拟现实技术的不断成熟、克隆技术的不断进步，越来越多人开始担心机器人否... | Michael Blog|麦先生的博客 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2016/07/14/男女权变迁及未来性别观念猜测/" data-toggle="tooltip" data-placement="top" title="男女权变迁及未来性别观念猜测">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2016/04/07/妨碍人与人之间真正相处的两种障碍/" data-toggle="tooltip" data-placement="top" title="妨碍人与人之间真正相处的两种障碍">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="2016/04/23/你和机器人有区别么/"
+                        data-title="你和机器人有区别么"
+                        data-url="http://praanmichael.com/2016/04/23/你和机器人有区别么/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'praanmichael';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Michael Blog 2016 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 0px;">
+                    </span> 
+                    Ported by <a href="http://michaelyang.space">Michael</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=praanmichael&repo=praanmichael.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://praanmichael.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'michaelyang.space';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

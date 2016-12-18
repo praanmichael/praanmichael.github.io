@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          互联网：一只极化世界的大手 - Michael Blog|麦先生的博客
+        
+    </title>
+
+    <link rel="canonical" href="http://praanmichael.com/2016/12/09/互联网：一只极化世界的大手/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Michael Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/internet.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                          <a class="tag" href="/tags/#互联网" title="互联网">互联网</a>
+                        
+                    </div>
+                    <h1>互联网：一只极化世界的大手</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 麦先生 on
+                        2016-12-09
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p><em>纵观自互联网诞生以来全世界范围内所发生的大大小小的事件，我们会发现，这个世界正朝着前所未有的极化发展。此处并非暗示互联网就是极化的根源，显然科技、经济和文化的状况才是决定性的因素，但不可否认的是，互联网在整个极化的过程中扮演了重要的角色。</em></p>
+<p>为了理解互联网所起的作用，倒过来先从结果说起。</p>
+<h1 id="一、两次让人大跌眼镜的投票"><a href="#一、两次让人大跌眼镜的投票" class="headerlink" title="一、两次让人大跌眼镜的投票"></a>一、两次让人大跌眼镜的投票</h1><p>没错，正是英国的脱欧公投和美国选举，当然这个<strong>“大跌眼镜”</strong>，是针对精英阶层而言。</p>
+<p>这两次投票有着惊人的相似性：精英和新中产阶级（姑且这么称呼，这里泛指技术尤其信息技术出现后催生的一类中产阶级）会坚定地站在其中一方，而普通或者底层民众和一些旧中产阶级则会一边倒地投向另外一方。如果对此存疑可以参考以下两张图片，分别是英国脱欧各地区投票结果以及美国大选的各州投票结果。<br><img src="http://p1.bpimg.com/567571/7a330201a62d9973.jpg" alt=""><br><img src="http://p1.bpimg.com/567571/82def6b4049c982c.png" alt=""></p>
+<p>不难发现，两次结果似乎都有着明确的“农村包围城市”的特征。从接受到的信息中分析，贫富差距和社会阶层的割裂是导致投票结果让人觉得有些匪夷所思的原因之一。随着新技术出现而迅速致富的人群，如以硅谷新锐为代表的新中产阶级大呼崩溃，另一端的群体则默默完成了投票决定了国家的走向。阵营双方对彼此充满了不了解，尤其精英的这一方对另一方的行为更加感到不可理喻。</p>
+<p>借用美国大选中哥大院长的话：</p>
+<blockquote>
+<p>She is not an angel, but he is not qualified</p>
+</blockquote>
+<p>但就是这样一个“不合格”的人最终当选了美国总统，让美国精英阶层如丧考妣，媒体几乎全部预测失误。然而Trump他在诸多公共场合的表现是真的如我们看到的那样有点儿不够格么？显然不是，任何一个走到权力巅峰的人绝对不可能是一个蠢人，再加上竞选团队和幕僚以及美国民主体系的极强纠错能力，Trump所做的不排除有偶尔犯错的可能，但在大体上一定是选择了一个至少部分符合政治、经济、文化状况的路径。</p>
+<p>从媒体的预测以及精英阶层的震惊可以看到，大洋彼岸的对面似乎正在呈现出一场完全不能理解双方的立场诉求的状况，大选本身只是一个表象，结合近期的一些国际局势变化，可以预感到正有一些深层次的事情正在发生：传统中产阶级收入的停滞不前甚至倒退引发的反全球化的制造业回流，随信息产业发家的富人跟民众的收入差距愈发增加，美国正试图摆脱“世界警察”职责所带来的沉重负担以及跟中国关系的微妙变化等等。</p>
+<p>再来看看英国，从图中孤零零的伦敦地区就可以感受到，英国似乎之前也正经历着一种巨大的隔阂。精英们从未走进乡间信息不通常的地区了解人们所想，以至于公投的结果是这样令人费解。有人表示：</p>
+<blockquote>
+<p>仅仅是为了表示‘无所谓’而投了脱欧，没想到最终的结果会是这样。</p>
+</blockquote>
+<h1 id="二、中国的情况如何"><a href="#二、中国的情况如何" class="headerlink" title="二、中国的情况如何"></a>二、中国的情况如何</h1><p>显然的是，中国也正经历着巨大的贫富差距、城乡差距和区域不均衡的状况。房价也只是表征之一，因为身在国内，就能更多地感受到这种巨大的差异之下的互相不理解。</p>
+<p>在浏览网络的时候，对于一部分人们来说，往往会不断遇到大量无聊、无用的内容，甚至在知乎这样在国内已经算是最优质的平台之一的地方，也会时常感到充斥了很多无聊、无用的问题和回答。这样大量的低质量内容某种程度上来说会消耗较多属于个人的精力，但是不禁会有这样的疑惑：这些在我们看来无聊无用的内容就没有其他人会看么？会有多少人看？他们为什么看？</p>
+<p>仔细去考虑这个问题的时候，就会发现这种状况跟大洋彼岸正在上演的剧情似乎并没有太大区别。以我个人为例，一直自认为价值观包容、擅于理解他人，但仍能感觉得到在对待信息和内容的时候，因自己和另外一些群体的差异而感受到的深深不安。GIF快手是什么？坐在地铁上还用着上个世纪手机的大妈生活和精神状态是怎样的？在自己看来恶俗的搞笑内容，到底有多少人觉得趣味良多？习惯了相近人群相处的自己，跟其他群体打交道时，会不会感到手足无措？等等等等，一连串的问题带给我的震惊远胜过大洋彼岸发生的事情。那这些人们已经习以为常的事情，是怎样就把人与人割裂开来的？</p>
+<h1 id="三、互联网是如何极化人群的"><a href="#三、互联网是如何极化人群的" class="headerlink" title="三、互联网是如何极化人群的"></a>三、互联网是如何极化人群的</h1><p>在进行分析之前，需要提三个重要前提：1.人们总是趋向于跟自己相近的人交流。2.互联网提供了一个对个人来说近似无限的信息源。3.每个人的时间精力有限。</p>
+<p>如果这三个前提为真，那么就意味着，在互联网的信息海洋中，人们总是能找到与自己相似的声音。在这些声音之中，有的相对中庸，有的则相对极端，充斥着非黑即白的武断和总试图把复杂问题简单化倾向的信息，对于群体来说越是极端则越容易抽取出特征，越具有代表性和引导性。这类信息因为其强烈的情绪性，往往能非常容易地触及多数人的神经、满足人们的好恶。</p>
+<p>正是如此一遍一遍地被所接受的信息“编程”，极化和隔阂愈演愈烈。很多人（包括我自己）无法忍受例如直播平台上无意看到的一位妆化得不知道该如何评价的女性用方言做着直播但是也有大量观众的情形。坦白地说，对于并非那种环境里生长的人们来说，可以包容基于生存状况、知识和经济状况之下产生的隔阂，但是很难真正理解这样形态的事物。因为这种割裂的存在，人们很难真正理解另一个群体的状况。</p>
+<p>我们常说创业，但是会发现创业往往是从一二线城市开始自上而下，但在某个时候就会停止不再继续传播，因为很多业务设计之初本身就是为一二线城市的人群提供的，甚至是为一二线人群中的极少数精英设计的。当然，创业一定是利益导向的，没有人会去考虑赚没有太多消费能力的人群的钱。但是可以说，如果让创业的精英们，为中国的10亿人群设计产品，很多人都会大呼头痛。</p>
+<p>再加之平台的封闭性和圈子的不相容性，各个平台、各个圈子内部的人们往往乐在其中且“相互看不顺眼”。又因为每个人的时间精力的限制，人们亦是总会选择简单的、不需要付出额外努力就能理解的信息接纳。对于底层群体来说，就会选择直截了当、内容简单、不需要大量观察思考的内容；对于中层及精英群体来说，亦不愿花费时间精力去了解底层所关注的内容，美其名曰“脱离了低级趣味”。</p>
+<p>底层人群在互联网上进行消遣，而精英群体则利用互联网的信息不断获得价值，意识形态上的差异也越来越大。民粹主义、沙文主义、精英主义等等这些相对极化的意识形态在互联网的时代被放大，这是值得担忧的。</p>
+<h1 id="四、该如何面对互联网的极化"><a href="#四、该如何面对互联网的极化" class="headerlink" title="四、该如何面对互联网的极化"></a>四、该如何面对互联网的极化</h1><p>诚然，这个问题过于庞大，绝非一言能以蔽之，但观念上的转变是可行的。</p>
+<p>互联网本身的特质、每个人精力的局限性难以改变，也许唯独需要调整的就是人们的态度：睁开双眼，抛弃幻觉，对于精英们来说，要避免精英主义和自视甚高的态度，认真地去理解世界上的每一种存在形态。</p>
+<p>也许我们可以借用物理的概念说“有高有低方有能”，即指因着阶层的高低的差异，才会产生社会的流动性，社会才会更富有活力。但我们更应该意识到“摇摇者易折”，当高处的少数人和低处的多数人的差异过大的时候，阶层的分布就变成了一根极细级高的竿子竖立在凹凸不平的地面上，将会极易折断。</p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start -->
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="2016/12/09/互联网：一只极化世界的大手/"
+                    data-title="互联网：一只极化世界的大手"
+                    data-url="http://praanmichael.com/2016/12/09/互联网：一只极化世界的大手/"
+                    data-images="http://praanmichael.com/2016/12/09/互联网：一只极化世界的大手//img/internet.jpg"
+                    data-content="纵观自互联网诞生以来全世界范围内所发生的大大小小的事件，我们会发现，这个世界正朝着前所未有的极... | Michael Blog|麦先生的博客 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2016/09/01/哥德尔变奏曲/" data-toggle="tooltip" data-placement="top" title="哥德尔的变奏曲">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="2016/12/09/互联网：一只极化世界的大手/"
+                        data-title="互联网：一只极化世界的大手"
+                        data-url="http://praanmichael.com/2016/12/09/互联网：一只极化世界的大手/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                          <a class="tag" href="/tags/#互联网" title="互联网">互联网</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'praanmichael';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Michael Blog 2016 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 0px;">
+                    </span> 
+                    Ported by <a href="http://michaelyang.space">Michael</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=praanmichael&repo=praanmichael.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://praanmichael.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'michaelyang.space';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

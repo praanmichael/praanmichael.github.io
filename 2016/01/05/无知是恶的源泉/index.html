@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          无知是恶的源泉 - Michael Blog|麦先生的博客
+        
+    </title>
+
+    <link rel="canonical" href="http://praanmichael.com/2016/01/05/无知是恶的源泉/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Michael Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/book.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                    </div>
+                    <h1>无知是恶的源泉</h1>
+                    <h2 class="subheading">智慧是识别恶的必要条件</h2>
+                    <span class="meta">
+                        Posted by 麦先生 on
+                        2016-01-05
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>阅读到公众号“麦子熟了”授权自公众号“周冲的影像声色（ID: fuck_your_dick）”的一片文章《容忍傻逼是不道德的》，不谈文题是否恰当，内容及思考在某些方面跟最近不谋而合，写下并整理。</p>
+<p><strong>一、这世界上最大的危险，莫过于真诚的无知和认真的愚蠢</strong></p>
+<p>以下引用自《容忍傻逼是不道德的》：</p>
+<blockquote>
+<p>《狱中书简》里有一段著名的话，将愚蠢与恶的关系，说得很清楚：</p>
+<p>对于善来说，愚蠢是比恶意更加危险的敌人。你可以抵抗恶意，你可以揭下它的面具，或者凭借力量来防止它。<br>恶意总是包含着它自身毁灭的种子，因为它总是使人不舒服，假如不是更糟的话。</p>
+<p>然而面对愚蠢，根本无法防卫。</p>
+<p>要反对愚蠢，抵抗和力量都无济于事，愚蠢根本不服从理性。</p>
+<p>同恶棍相比，蠢人总是自鸣得意。而且他很容易变成危险，因为要使他挥拳出击，那是易如反掌的。我们往往以为愚蠢只是low，只是可笑，并没有实际的危害。但是，愚蠢的危险，并不只在于它的不辨是非，而是它会动用各种高全、伟光正的语言，来自我包装，使之富有煽动性和诱惑力。一旦遇上某种机，这些认真的愚蠢，就会成为楷模和榜样，在社会畅行无阻。</p>
+<p>马丁·路德·金说过，“这世界上最大的危险，莫过于真诚的无知和认真的愚蠢。”</p>
+<p>低智是邪恶最好的温床，愚蠢是专制最好的土壤，无知是道德最大的敌人。</p>
+<p>如狄马所云：“一切没有选择的行为，在道德上都是没有价值的。你表扬一个太监守贞操，就像在我们的时代你表扬一个下岗工人勤俭节约，农民衣着朴素一样没有意义。”</p>
+<p>朋霍费尔总结说：“愚蠢是养成的，而不是天生的……在这种环境下，人们把自己养成蠢人，或者允许别人把自己弄成蠢人。”</p>
+<p>《狱中书简》里有著名的两句话：<br>愚蠢是一种道德上的缺陷，而不是一种理智上的缺陷。<br>愚蠢是一个社会学问题，而不是一个心理学问题。</p>
+<p>苏格拉底说：智慧即美德。<br>斯多葛派云：道德就是知识。<br>康德说：道德要在每个人的自由意志下行动，不是被迫的，也不应该受外界的榜样影响，更不是为了功利和自私的目的，而是理性思考的结果，行动的准则要与立法的法则一致。</p>
+</blockquote>
+<p>如果要举例说明，从NASA为追求政治效应、财政拨款等等无视工程师提出的泡沫碎片带来的损伤导致的巨大事故，到身边网络上无处不在的负面情感宣泄、对于公众人物的无端攻击、匪夷所思的群体事件，深入探查之后仔细思考，发现实际上最终指向了一个特征，无知。当然，这份无知部分源自于社会，同时，这份无知也源自于个体本身。</p>
+<p>为什么要这么说？因为无知便连分辨善恶是非的能力都缺失了，当其为恶时，根本不认为自己在作恶，相反可能认为自己的做法跟某种大道至理相符，进而变本加厉。在某些情况下，恶行的实施者本身是具有知识的，清楚地知道事情的可能情况的，正如NASA的事故，最杰出的科学家和工程师们因为利益等等缘故，选择了对危险的视而不见。</p>
+<p><strong>二、愚蠢是养成的，而不是天生的</strong></p>
+<p>前段时间看了国产的影片《烈日灼心》，电影本身质量如何不谈，但是片中可能看过的人都记得的一句话就是“人性是动物性和神性的总和”。这句话反复地在脑海中盘旋不去，深以为然。</p>
+<p>动物性的部分不用多说，相比人们还是能有所认知的，例如：食欲、色欲等等，而神性究竟指的是什么？要想一一列举神性里包含着哪些毫无缺漏应该是比较难的，但是可以说，一定包括一种来自于人类社会的文化、道德、艺术、科学等等这些赋予社会性人的一些特征，具体来讲可能是奉献精神、对他人的尊重、对美的向往、对美好爱情的向往等等。这些东西在其他动物的身上不具备、较少具备或者说存在但尚未被发现，而这些也是我们人类区别于动物的一种标志。</p>
+<p>然而每一个人类的个体所能拥有这种神性的时间是有限的，这种神性是伴随着意识而存在的，所以说这种神性某程度上而言是意识的、是伴随着人类社会存在才具有的特性，是几千年前不完全具有的，是未被编码进入基因的后天培养习得的。</p>
+<p>那么不禁要发问，人类社会中所有的意识都是好的、善的或者是正面积极地么？答案显然是否定的，有时候不得不承认，人不仅仅是动物性和神性，还有一些魔性，当然，魔鬼也是另一种形式的神。细思极多现存的观点，都往往会发现诸多的破绽，表面上堂而皇之的观念背后，深处往往藏匿着可怕的魔鬼。</p>
+<p>有一次去做心理咨询的时候，在咨询室外沙发上等候，隔壁的沙发坐了一位四十岁左右的母亲，这位母亲一直同咨询的前台客服聊天，坐在一边也不得不听，想列举一些非常有意思的片段：</p>
+<blockquote>
+<p>“我女儿其他都随便，三十岁的之前必须嫁人结婚，其他的我都不管，必须找个人结婚”<br>“我女儿跟我很亲的哎，什么都跟我讲，还跟我讲’妈妈，以后你老了就跟着我就好，我照顾你’”<br>问其他人：<br>“你来咨询吗？哦，你陪别人来咨询啊，那ta是不是心理有什么病啊？”</p>
+</blockquote>
+<p>具体的内容不记得太多了，也不知怎么的我就加入到谈话当中，不得不说，这位母亲的话语中明显的藏匿的很多仔细去觉察会发现非常不舒服的潜意识的认知模式。</p>
+<p>“我女儿其他都随便，三十岁的之前必须嫁人结婚，其他的我都不管，必须找个人结婚”这句话似乎普遍出自于中国的父母之口不是么？但是这句话的背后仔细品读到底藏着什么？很简单，这句话是在说，我的女儿其他小事我不管，但是我认为这件事是我女儿人生最重要的一件事，在这件最重要的事情上女儿必须听我的，这才能彰显作为一个母亲的威严、权利和责任，她必须听我的。再往多发散，实际上这涉及到我国的传统文化，这一部分，甚至可以用糟粕形容。</p>
+<p>我们可以反问，第一，结婚这件事到底是不是女儿一生中最重要的事情，除了结婚嫁人有没有其他事情比这更重要？不要说结婚结对了才能够拥有终身的幸福，即使不结婚也可以拥有其他超越婚姻的太多幸福的选择了</p>
+<p>第二，最重要的事情管了，其他事情会真的不管么？这是一种潜意识里无处不在的操控，表意识粗略地认识到了似乎什么都管不太对，但是最重要的事我一定要管，这才能显示我对女儿的人生轨迹的控制，这才能体现我的权威以及证明我对这个世界的存在</p>
+<p>第三，这位母亲为什么要这么做？事实上，这不仅仅是我国传统文化中对于权力的崇拜和渴求，更是一种轮回，是一种复仇，是一种施虐，“我的父母选择了影响了我的婚姻，我是痛苦的，我是不幸福的，这种不幸福我是无法化解的，我只有通过重复这种痛苦给我的女儿，我才能得到痛苦的释然和解放”这便是一种“攻击者认同”，被攻击者感到痛苦的同时，可能会潜移默化的认同攻击者的行为，通过转而攻击他人的方式表达内心的痛苦。</p>
+<p>“你来咨询吗？哦，你陪别人来咨询啊，那ta是不是心理有什么病啊？”在这位母亲的眼里，做心理咨询的一定是有病的，这种病让人觉得恐怖、担忧，这位母亲的语气中深深压抑了一种愤怒和恐惧，“我的女儿是不是有病？我的女儿有病了怎么办？好害怕。”“凡是来做心理咨询的一定都是有病的对吧，这里就相当于精神病院的预科不是么”</p>
+<p>不得不说，在我国，弥漫着一种反智主义的倾向，认为读书无用，认为知识无用，对知识完全不尊重。这种风气不知源自于何时，可能源自于建国后的某次大革命，可能源自于无良媒体的无知。很多时候，人们不明白一件事情有多复杂，总喜欢简化去思考，而且最重要的一点就是，很多人从来不思考自己的思维方式，他们的思考方式中存在着百出的漏洞。以上那位母亲把心理咨询等同于有病，而且她认知不到对于其他来访者有病的恐惧实际源自于对自己女儿的担忧。</p>
+<p>“我女儿跟我很亲的哎，什么都跟我讲，还跟我讲’妈妈，以后你老了就跟着我就好，我照顾你’”关于这一点我只想分享一个片段，女儿从咨询室出来之后，这位母亲问她“都跟你讲了些什么啊”，女儿回答“蛮严重的”然后就再也不说话了。</p>
+<p><strong>三、智慧是破除恶的途径之一</strong></p>
+<p>真的，恶不可怕，可怕的是人们根本认知不到那是恶。一定想要问，什么是恶？我想，恶的表现之一就是所作所想是伤害到一个人的动物性又或是高尚神性的，对象包括别人，也包括自己。仔细思考，恶往往源自于蛮荒中的无知，拥有智慧，拥有理解力，也才能够勘破掩藏在人性中魔性的部分吧。</p>
+<p>我们可以痛恨养成我们认知的社会环境给我们带来的痛苦，但是，在拥有了可以识别恶的能力之后，就会拥有更多的勇气破除且对恶说不。</p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start -->
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="2016/01/05/无知是恶的源泉/"
+                    data-title="无知是恶的源泉"
+                    data-url="http://praanmichael.com/2016/01/05/无知是恶的源泉/"
+                    data-images="http://praanmichael.com/2016/01/05/无知是恶的源泉//img/book.jpg"
+                    data-content="阅读到公众号“麦子熟了”授权自公众号“周冲的影像声色（ID: fuck_your_dick）”... | Michael Blog|麦先生的博客 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2016/04/07/妨碍人与人之间真正相处的两种障碍/" data-toggle="tooltip" data-placement="top" title="妨碍人与人之间真正相处的两种障碍">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                </ul>
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="2016/01/05/无知是恶的源泉/"
+                        data-title="无知是恶的源泉"
+                        data-url="http://praanmichael.com/2016/01/05/无知是恶的源泉/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'praanmichael';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Michael Blog 2016 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 0px;">
+                    </span> 
+                    Ported by <a href="http://michaelyang.space">Michael</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=praanmichael&repo=praanmichael.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://praanmichael.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'michaelyang.space';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          哥德尔的变奏曲 - Michael Blog|麦先生的博客
+        
+    </title>
+
+    <link rel="canonical" href="http://praanmichael.com/2016/09/01/哥德尔变奏曲/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Michael Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/math.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                          <a class="tag" href="/tags/#GEB" title="GEB">GEB</a>
+                        
+                    </div>
+                    <h1>哥德尔的变奏曲</h1>
+                    <h2 class="subheading">围绕哥德尔不完备性定理的遐想</h2>
+                    <span class="meta">
+                        Posted by 麦先生 on
+                        2016-09-01
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>本文包括：</p>
+<pre><code>- 阐述定理本身
+- 以芝诺悖论的解决过程为例，解释定理的两个方面
+- 不断增加条件或改换系统的解决过程也符合历史发展的特点
+- 元
+- 元规则和人工智能
+</code></pre><p><strong>一、哥德尔不完备性定理内容</strong></p>
+<p>这里的变奏并不是指巴赫大名鼎鼎的哥德堡变奏曲的变奏，是指一个定理的不同阐述角度。定理是由哥德尔完成，从《哥德尔、爱舍尔、巴赫》一书中看到，哥德尔不完备性定理是一个非常具有大道至简接近本源味道的定理，围绕它能得到一些非常有趣的内容。</p>
+<p>哥德尔不完备性定理，它包含两条定理，以下引自维基百科<a href="https://zh.wikipedia.org/wiki/%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86" target="_blank" rel="external">哥德尔不完备性定理</a></p>
+<blockquote>
+<p>1.任何相容(自洽，不蕴含矛盾)的形式系统，只要蕴涵皮亚诺算术公理（一个关于自然数的五条公理系统），就可以在其中构造在体系中不能被证明的真命题，因此通过推演不能得到所有真命题（即体系是不完备的）。<br>2.任何相容的形式系统，只要蕴涵皮亚诺算术公理，它就不能用于证明它本身的相容性。</p>
+</blockquote>
+<p>这是个读起来费解的定理，通俗化一点讲就是，<strong>任何一个包含一阶逻辑和初等数论的无矛盾系统，都可以在其中构造一些命题，这些命题无法通过推演证明它的真假，即便要证明其真假，也不可能在该系统内部完成。</strong></p>
+<p><strong>二、从悖论的解决过程理解定理</strong></p>
+<p>有一些古老的悖论可以用来解释这个定理的意义。比如，芝诺的阿基里斯和乌龟的悖论，即跑得飞快地阿基里斯永远追不上跑在前面的乌龟，因为推理的过程是阿基里斯追上了一些，在这段时间内乌龟又往前爬了一些，每次追击乌龟总会往前爬一些，所以永远也追不上。但是现实经验显然是不可能追不上。这就是出现了一个看似真假难辨的命题：阿基里斯到底能不能追上乌龟？用人类经验显然可以知道，当然可以追上，然而问题出在哪儿？</p>
+<p>事实上通过数学知识可以知道即使基于无穷分割最终阿基里斯和乌龟跑的距离差将会是有限的结果。显然芝诺的时代并没有无穷小量这个概念，因此这个悖论显得有些难以解决。</p>
+<p>同样也可以通过增加一个时间维度来分析芝诺论证过程中的错误。在叙述中，“当阿基里斯追上一段距离之后，乌龟前进了一段距离，当阿基里斯🈶追上一段距离之后”这里无形中做了一个假设，即<strong>阿基里斯追上一段距离之后就停下不动了等乌龟前进一段时间之后阿基里斯再继续追</strong>，这无形中相当于<strong>阿基里斯每跑一段时间都会停下等乌龟向前跑了之后再启动追</strong>，那么必然的结果是乌龟永远都在阿基里斯前面，但事实上是乌龟向前爬的这段距离的时间里阿基里斯说不定早已超过乌龟了。芝诺犯下的错误即是他把连续的运动过程人为分成了不连续的且分先后的过程，结果当然会是荒谬的。*</p>
+<p>回顾一下研究芝诺的悖论的过程，会发现一些有趣的事情：<strong>在芝诺假设的体系内这个问题难以解决（无法证明这个与经验相悖的命题的真假），引入无穷小量的过程事实上是往改系统内增加了一个条件或者说其他定理，或者不在原有的体系内，增加一个维度在高维的体系内解决问题。这恰好就是哥德尔的定理所表达的内容。</strong></p>
+<p>同样增加时间维度来解决悖论是一种非常有效的办法。例如“我说的这句话是谎话”，如果使用一阶的逻辑去看这句话，就是一个无限递归的悖论。如果引入时间，将这句话分割成不连续的意群（事实上语言本身也是不连续的）“我说的这句话”和“是谎话”这两部分。当表达“我说的这句话”的时候，并不能预言时间线上下一时刻的“是谎话”，“我说的这句话”只能限定于“我说的这句话”几个字本身，“是谎话”则是另一个意群。这样一来，悖论迎刃而解*</p>
+<p><strong>三、定理描述的规律与历史变化过程不谋而合</strong></p>
+<p>从历史发展的角度来看，这里的“往系统内增加一个条件或者定理”或“不在这个系统内解决问题”非常有趣的。</p>
+<p>“往系统内增加条件或者定理”或者”不在这个系统内解决问题“这个过程事实上正是科学发展的过程。欧氏几何的公理体系被认为是完备的，后来又出现了非欧几何，人们对于欧式几何增加了限定条件或者说对其进行了完善；经典物理体系最终被限定在宏观尺度，而微观尺度上就需要量子物理了。这样的例子举不胜举。甚至人一生的认知也是一个不断往原有系统内增加新的认知以达到尽可能自洽的结果。但事实上，似乎人们总是挣扎之后发现自己仍在一个更大的系统内，在有限的时间内似乎完全看不到完备的尽头在哪儿。</p>
+<p><strong>四、元</strong></p>
+<p>再引入另一个概念：“元”。元有更原始的意思，认知的元认知就是对于认知过程的认知，规则的元规则即是对于规则的规则。回顾讨论芝诺的悖论的过程也是一种元处理方式，即跳出了讨论本身，分析讨论的过程，从中进行总结。</p>
+<p>哥德尔不完备性定理本身也是一个非常“元”的定理，从这个定理能够推演出非常多的解释或者其他命题。</p>
+<p>犹记得小时候贪得无厌的我常想，等我遇到灯神，我许的第一个愿望就是”让我再多许十个愿望“，然后我不断重复这句话，于是我就有了无穷的愿望可以实现。现在知道，这个过程叫做递归，我贪得无厌的愿望事实上叫做元愿望，我许的第一个”多十个愿望“的愿望是”元元元元元……“愿望（这取决于我到底许了多少次愿望）。但事实上，如果我无限地许愿下去，这个愿望实现的可能性就越来越小，因为这个愿望太”元“了，以至于至少也得是个”元元元元元……“灯神才有能力实现这个愿望。如果这个灯神能实现我无限多的愿望，那这个灯神就是”元元元元元……“的至高神了。但是显然，这个许愿系统是不现实的，这个灯神递归塔即使是无限地递归下去这个至高神到底有多高，这个系统究竟能不能完备，这里就要打个问号了。（所以根本没有上帝？）</p>
+<p>在低阶系统内，即二维的世界里去看爱舍尔的画也是没有问题的，只不过会产生不断循环的递归过程，人总是上了梯子去了楼上又走了下来这样。但是从二维的元世界三维去看，就会发现这个系统事实上漏洞百出。曾经玩过的一个叫做《FEZ》的游戏，讲的就是一个二维世界的小人突然因为一个立方体有了三维的能力去历险的故事。当时玩的不亦乐乎，现在想来，会不会有在四维元世界的生命看着我玩弄二维世界的小人物是不是也是一样的戏谑。</p>
+<p><strong>五、元规则和人工智能</strong></p>
+<p>事实上去思考哥德尔的定理，本质上也是思考人自身的思维过程。例如人在下棋的时候，往往能够有预见性明白这局棋的大势已去，因为我们除了试图下赢这盘棋之外，我们还明白有些其他的元规则：技术上下赢这盘棋和我们是否一定要撑到最后见证我们输棋的时刻是没有任何关系的，因此我们可以选择提前认输，而计算机就不会，除非计算机被人为加上一条规则即“90%大势已去的时候就放弃棋局”这样的规则，并且还要再定义一个更高的规则即“怎么样才算有很大概率赢——无论是己方或者对方”。</p>
+<p>总的来说，对于人工智能的训练和研究，事实上也是研究我们自身的思考过程的过程。我们的思维中，有一些非常灵活的元规则在对我们起着作用，这些元规则很难被察觉，但是如果加以合理利用将会是非常有助于改善我们的认知过程的。</p>
+<p>对于以上总结一下就是：</p>
+<blockquote>
+<p>思考或是接受信息的时候除了逻辑本身还有逻辑引用的前提是着重需要考察的内容，也要考察很多元逻辑、元前提，追根溯源也许会有很不一样的收获<br>与人沟通亦是如此，除了理解对方表达了什么，也要理解对方的动机<br>学习亦是如此，不断学习新的定理并不断尝试改变系统的层级，才会有更多的豁然开朗</p>
+</blockquote>
+<p>不知道爱因斯坦当时追求的是什么层面的大统一，如果是想要完备的大统一，估计确实，挺难的。</p>
+<p>*部分合理性有待考量</p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start -->
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="2016/09/01/哥德尔变奏曲/"
+                    data-title="哥德尔的变奏曲"
+                    data-url="http://praanmichael.com/2016/09/01/哥德尔变奏曲/"
+                    data-images="http://praanmichael.com/2016/09/01/哥德尔变奏曲//img/math.jpg"
+                    data-content="本文包括：
+- 阐述定理本身
+- 以芝诺悖论的解决过程为例，解释定理的两个方面
+- 不断增加条... | Michael Blog|麦先生的博客 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2016/12/09/互联网：一只极化世界的大手/" data-toggle="tooltip" data-placement="top" title="互联网：一只极化世界的大手">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2016/07/14/男女权变迁及未来性别观念猜测/" data-toggle="tooltip" data-placement="top" title="男女权变迁及未来性别观念猜测">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="2016/09/01/哥德尔变奏曲/"
+                        data-title="哥德尔的变奏曲"
+                        data-url="http://praanmichael.com/2016/09/01/哥德尔变奏曲/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#思考整理" title="思考整理">思考整理</a>
+                        
+                          <a class="tag" href="/tags/#GEB" title="GEB">GEB</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'praanmichael';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/praanmichael">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Michael Blog 2016 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 0px;">
+                    </span> 
+                    Ported by <a href="http://michaelyang.space">Michael</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=praanmichael&repo=praanmichael.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://praanmichael.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'michaelyang.space';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://praanmichael.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
